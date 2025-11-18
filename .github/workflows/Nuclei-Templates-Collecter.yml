@@ -41,7 +41,7 @@ jobs:
     - name: Running nucleihub
       run: |
         # Step 1
-        curl -s "https://raw.githubusercontent.com/rix4uni/nucleihub/refs/heads/main/reponames.txt" | nucleihub updatecheck | grep "Updated today:" | sed 's/^\Updated today: //' | nucleihub download --output-directory nucleihub-downloaded-repos
+        curl -s "https://raw.githubusercontent.com/ghost11411/Nucleihub-Templates-Collected/refs/heads/main/reponames.txt" | nucleihub updatecheck | grep "Updated today:" | sed 's/^\Updated today: //' | nucleihub download --output-directory nucleihub-downloaded-repos
 
         # Step 2
         nucleihub duplicate --input-directory nucleihub-downloaded-repos --output-directory nucleihub-templates --large-content
